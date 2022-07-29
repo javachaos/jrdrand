@@ -14,8 +14,7 @@ typedef unsigned long long intrin_u64;
 #endif
 
 #if defined(__RDRND__) || defined(_MSC_VER)  // conditional definition if you want
-static inline
-uint64_t rdrand64() {
+uint64_t rdrand64(){
     intrin_u64 ret;
     do{}while( !_rdrand64_step(&ret) );  // retry until success.
     return ret;
@@ -23,7 +22,6 @@ uint64_t rdrand64() {
 #endif
 
 #if defined(__RDSEED__) || defined(_MSC_VER)
-static inline
 uint64_t rdseed64() {
     intrin_u64 ret;
     do{}while( !_rdseed64_step(&ret) );   // retry until success.

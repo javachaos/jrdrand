@@ -24,6 +24,7 @@ public class jRdRand {
     static {
         try
         {
+            //must set VM option -Djava.library.path=build/libs/rdrand/shared
             System.loadLibrary ("rdrand");
         }
         catch ( Throwable e )

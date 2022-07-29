@@ -4,8 +4,5 @@ public class MainDemo {
         long s = rd.seed();
         System.out.println("RDSEED: " + s);
         System.out.println("RDRAND: " + rd.rand(s));
-        System.out.println("RDRAND: " + rd.rand(s));
-        System.out.println("RDRAND: " + rd.rand(s));
-        System.out.println("RDRAND: " + rd.rand(s));
     }
 }

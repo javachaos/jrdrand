@@ -6,7 +6,7 @@ plugins {
     id 'c'
 }
 
-mainClassName = 'jRdRand'
+//mainClassName = 'MainDemo'
 
 repositories {
     mavenCentral()
@@ -68,3 +68,9 @@ model {
 }
 
 classes.dependsOn 'rdrandSharedLibrary'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'MainDemo'
+    }
+}

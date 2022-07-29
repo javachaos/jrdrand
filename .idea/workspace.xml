@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Uncommented conditional for inline in rdrand.c">
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed inline keyword altogether in rdrand.c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
     </list>
@@ -80,7 +80,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/fred/IdeaProjects/jRdRand/src/main/resources/native/x86_64/windows",
+    "last_opened_file_path": "C:/Users/fred/IdeaProjects/jRdRand/build/libs/jRdRand-1.0-SNAPSHOT.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -101,7 +101,7 @@
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.rdrand">
+  <component name="RunManager" selected="JAR Application.Unnamed">
     <configuration name="rdrand" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -219,7 +219,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/jRdRand.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/jRdRand-1.0-SNAPSHOT.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\fred\IdeaProjects\jRdRand" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
@@ -248,9 +248,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jRdRand [build]" />
         <item itemvalue="Gradle.jRdRand [clean]" />
-        <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jRdRand [model]" />
         <item itemvalue="Gradle.jRdRand [components]" />
       </list>
@@ -328,7 +328,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659137366910</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added static keyword before inline statements in rdrand.c">
+      <created>1659137703019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659137703019</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Removed inline keyword altogether in rdrand.c">
+      <created>1659138119808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659138119808</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +366,9 @@
     <MESSAGE value="fixed gradle bug." />
     <MESSAGE value="Replaced C/C++ code with more watered down version. End result is the same, just less verbose and no need for copyright." />
     <MESSAGE value="Uncommented conditional for inline in rdrand.c" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uncommented conditional for inline in rdrand.c" />
+    <MESSAGE value="Added static keyword before inline statements in rdrand.c" />
+    <MESSAGE value="Removed inline keyword altogether in rdrand.c" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed inline keyword altogether in rdrand.c" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

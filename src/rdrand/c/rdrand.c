@@ -8,21 +8,22 @@
 // ICC for Linux declares rdrand's output as unsigned long, but must be long long for a Windows ABI
 typedef uint64_t intrin_u64;
 #else
-// GCC/clang headers declare it as unsigned long long even for Linux where long is 64-bit, but uint64_t is unsigned long and not compatible
+// GCC/clang headers declare it as unsigned long long even for Linux where long is 64-bit,
+// but uint64_t is unsigned long and not compatible
 typedef unsigned long long intrin_u64;
 #endif
 
 #if defined(__RDRND__) || defined(_MSC_VER)  // conditional definition if you want
-inline
+static inline
 uint64_t rdrand64() {
     intrin_u64 ret;
     do{}while( !_rdrand64_step(&ret) );  // retry until success.
     return ret;
 }
-//#endif
+#endif
 
 #if defined(__RDSEED__) || defined(_MSC_VER)
-inline
+static inline
 uint64_t rdseed64() {
     intrin_u64 ret;
     do{}while( !_rdseed64_step(&ret) );   // retry until success.

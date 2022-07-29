@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="fixed gradle bug.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.h" beforeDir="false" />
-    </list>
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Replaced C/C++ code with more watered down version. End result is the same, just less verbose and no need for copyright." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +77,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/fred/IdeaProjects/jRdRand/build/libs/jRdRand.jar",
+    "last_opened_file_path": "C:/Users/fred/IdeaProjects/jRdRand/src/main/resources/native/x86_64/windows",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -91,6 +86,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main\resources\native\x86_64\windows" />
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\rdrand\native\x86_64\windows" />
       <recent name="$PROJECT_DIR$/src/rdrand/native/x86_64/linux" />
     </key>
@@ -315,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659133499222</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Replaced C/C++ code with more watered down version. End result is the same, just less verbose and no need for copyright.">
+      <created>1659137122364</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659137122364</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +340,8 @@
     <MESSAGE value="Added ability to execute jar file and have Demo code run." />
     <MESSAGE value="Updated README.md added boilerplate for pushing to GitHub packages" />
     <MESSAGE value="fixed gradle bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed gradle bug." />
+    <MESSAGE value="Replaced C/C++ code with more watered down version. End result is the same, just less verbose and no need for copyright." />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced C/C++ code with more watered down version. End result is the same, just less verbose and no need for copyright." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

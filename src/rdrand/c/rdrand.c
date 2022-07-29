@@ -12,7 +12,7 @@ typedef uint64_t intrin_u64;
 typedef unsigned long long intrin_u64;
 #endif
 
-//#if defined(__RDRND__) || defined(_MSC_VER)  // conditional definition if you want
+#if defined(__RDRND__) || defined(_MSC_VER)  // conditional definition if you want
 inline
 uint64_t rdrand64() {
     intrin_u64 ret;

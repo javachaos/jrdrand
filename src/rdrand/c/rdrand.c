@@ -52,6 +52,14 @@ typedef struct cpuid_struct {
 	unsigned int edx;
 } cpuid_t;
 
+void cpuid (cpuid_t *info, unsigned int leaf, unsigned int subleaf)
+{
+	asm volatile("cpuid"
+	: "=a" (info->eax), "=b" (info->ebx), "=c" (info->ecx), "=d" (info->edx)
+	: "a" (leaf), "c" (subleaf)
+	);
+}
+
 int _is_intel_cpu ()
 {
 	static int intel_cpu= -1;
@@ -74,13 +82,7 @@ int _is_intel_cpu ()
 	return intel_cpu;
 }
 
-void cpuid (cpuid_t *info, unsigned int leaf, unsigned int subleaf)
-{
-	asm volatile("cpuid"
-	: "=a" (info->eax), "=b" (info->ebx), "=c" (info->ecx), "=d" (info->edx)
-	: "a" (leaf), "c" (subleaf)
-	);
-}
+
 
 int get_drng_support ()
 {

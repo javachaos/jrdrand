@@ -203,7 +203,7 @@ unsigned int rdrand_get_n_uints (unsigned int n, unsigned int *dest)
 	return n;
 }
 
-unsigned int rdrand_get_bytes (unsigned int n, unsigned char *dest)
+int rdrand_get_bytes (unsigned int n, unsigned char *dest)
 {
 	unsigned char *headstart, *tailstart;
 	uint64_t *blockstart;
@@ -252,7 +252,7 @@ unsigned int rdrand_get_bytes (unsigned int n, unsigned char *dest)
 
 	for (i= 0; i< count; ++i, ++blockstart) {
 		if ( ! rdrand64_retry(RDRAND_RETRIES, blockstart) ) {
-			return i*8+lhead;
+			return (int) i*8+lhead;
 		}
 	}
 
@@ -260,13 +260,13 @@ unsigned int rdrand_get_bytes (unsigned int n, unsigned char *dest)
 
 	if ( ltail ) {
 		if ( ! rdrand64_retry(RDRAND_RETRIES, &temprand) ) {
-			return count*8+lhead;
+			return (int) count*8+lhead;
 		}
 
 		memcpy(tailstart, &temprand, ltail);
 	}
 
-	return n;
+	return (int) n;
 }
 
 int rdseed16_step (uint16_t *seed)

@@ -43,7 +43,7 @@ public class RdRand {
 
     static {
         String OS = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH);
-        String protocol = RdRand.class.getResource("RdRand.class").getProtocol();
+        String protocol = Objects.requireNonNull(RdRand.class.getResource("RdRand.class")).getProtocol();
         if(Objects.equals(protocol, "jar")){
             if (OS.startsWith("windows")) {
                 NativeUtils.loadWindows();

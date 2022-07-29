@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Added VisualCpp runtime error checks, GuardStack and ASLR+CFG. Also included compiled dll to natives dir.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NativeUtils.java" afterDir="false" />
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Added ability to execute jar file and have Demo code run.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RdRand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RdRand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/native/x86_64/linux/librdrand.so" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/linux/librdrand.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/native/x86_64/windows/rdrand.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/windows/rdrand.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659124052617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added ability to execute jar file and have Demo code run.">
+      <created>1659129854112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659129854112</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +243,8 @@
     <MESSAGE value="Reordered functions" />
     <MESSAGE value="fixed a compile error on like 206 of rdrand.c" />
     <MESSAGE value="Added VisualCpp runtime error checks, GuardStack and ASLR+CFG. Also included compiled dll to natives dir." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added VisualCpp runtime error checks, GuardStack and ASLR+CFG. Also included compiled dll to natives dir." />
+    <MESSAGE value="Added ability to execute jar file and have Demo code run." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability to execute jar file and have Demo code run." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

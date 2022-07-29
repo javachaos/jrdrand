@@ -12,10 +12,9 @@ public class RdRand {
      * If the CPU is not an intel processor or does not support DRNG
      * return a value less than zero.
      *
-     * @param seed initial seed value for rdrand
      * @return a 64-bit DRNG value from a supported intel processor
      */
-    private native long rdrand(long seed);
+    private native long rdrand();
 
     /**
      * Attempt to get a true random seed using the Intel RDSEED cpu instruction.
@@ -25,10 +24,10 @@ public class RdRand {
      */
     private native long rdseed();
 
-    public long rand(long seed) {
+    public long rand() {
         long s = 0;
         while (s <= 0) {
-            s = rdrand(seed);
+            s = rdrand();
         }
         return s;
     }

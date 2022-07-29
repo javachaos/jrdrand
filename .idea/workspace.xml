@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Updated README.md added boilerplate for pushing to GitHub packages" />
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="fixed gradle bug.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.h" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jRdRand" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jRdRand" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jRdRand" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,7 +102,7 @@
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Unnamed">
+  <component name="RunManager" selected="Application.rdrand">
     <configuration name="rdrand" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -77,6 +113,48 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="jRdRand [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="jRdRand [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="jRdRand [components]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -162,6 +240,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.rdrand" />
+      <item itemvalue="Gradle.jRdRand [build]" />
+      <item itemvalue="Gradle.jRdRand [clean]" />
       <item itemvalue="Gradle.jRdRand [jar]" />
       <item itemvalue="Gradle.jRdRand [components]" />
       <item itemvalue="Gradle.jRdRand [model]" />
@@ -169,6 +249,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.jRdRand [build]" />
+        <item itemvalue="Gradle.jRdRand [clean]" />
         <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jRdRand [model]" />
         <item itemvalue="Gradle.jRdRand [components]" />
@@ -226,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659133013045</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed gradle bug.">
+      <created>1659133499222</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659133499222</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +336,8 @@
     <MESSAGE value="Added VisualCpp runtime error checks, GuardStack and ASLR+CFG. Also included compiled dll to natives dir." />
     <MESSAGE value="Added ability to execute jar file and have Demo code run." />
     <MESSAGE value="Updated README.md added boilerplate for pushing to GitHub packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md added boilerplate for pushing to GitHub packages" />
+    <MESSAGE value="fixed gradle bug." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed gradle bug." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

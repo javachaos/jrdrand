@@ -7,7 +7,8 @@ plugins {
     id 'maven-publish'
 }
 
-//mainClassName = 'MainDemo'
+group 'com.github.javachaos'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -82,14 +83,11 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/javachaos/jrdrand")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
     publications {
-        gpr(MavenPublication) {
-            from(components.java)
-        }
     }
 }

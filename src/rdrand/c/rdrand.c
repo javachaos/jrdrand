@@ -308,7 +308,7 @@ int rdseed64_slow(uint64_t *seed) {
 }
 
 JNIEXPORT jlong JNICALL
-Java_jRdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must check for 0 ***
+Java_RdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must check for 0 ***
 {
     if (_is_intel_cpu() && get_drng_support()) {
         uint64_t s = seed;
@@ -324,7 +324,7 @@ Java_jRdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must chec
 }
 
 JNIEXPORT jlong JNICALL
-Java_jRdRand_rdseed(JNIEnv *env, jobject obj) // *** Caller must check for zero ***
+Java_RdRand_rdseed(JNIEnv *env, jobject obj) // *** Caller must check for zero ***
 {
     if (_is_intel_cpu() && get_drng_support()) {
         uint64_t seed;
@@ -647,7 +647,7 @@ JNI_OnLoad_rdrand(JavaVM *vm, void *reserved)
 }
 
 JNIEXPORT jlong JNICALL
-Java_jRdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must check for 0 ***
+Java_RdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must check for 0 ***
 {
         uint64_t s = seed;
         unsigned char ok = rdrand_64(&s, 33);
@@ -659,7 +659,7 @@ Java_jRdRand_rdrand(JNIEnv *env, jobject obj, jlong seed)// *** Caller must chec
 }
 
 JNIEXPORT jlong JNICALL
-Java_jRdRand_rdseed(JNIEnv *env, jobject obj) // *** Caller must check for zero ***
+Java_RdRand_rdseed(JNIEnv *env, jobject obj) // *** Caller must check for zero ***
 {
     uint64_t seed;
     rdseed_64(&seed, 33);

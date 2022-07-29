@@ -1,4 +1,4 @@
-public class jRdRand {
+public class RdRand {
 
     /**
      * Call c function which returns the result of a call to RDRAND
@@ -11,7 +11,7 @@ public class jRdRand {
      * @param seed initial seed value for rdrand
      * @return a 64-bit DRNG value from a supported intel processor
      */
-    public native long rdrand(long seed);
+    private native long rdrand(long seed);
 
     /**
      * Attempt to get a true random seed using the Intel RDSEED cpu instruction.
@@ -19,9 +19,25 @@ public class jRdRand {
      *
      * @return a true random seed 64-bits wide
      */
-    public native long rdseed();
+    private native long rdseed();
 
-    static {
+    public long rand(long seed) {
+        long s = 0;
+        while (s <= 0) {
+            s = rdrand(seed);
+        }
+        return s;
+    }
+
+    public long seed() {
+        long s = 0;
+        while (s <= 0) {
+            s = rdseed();
+        }
+        return s;
+    }
+
+    static {//TODO Replace with System.load() and a switch statement per OS
         try
         {
             //must set VM option -Djava.library.path=build/libs/rdrand/shared
@@ -32,13 +48,5 @@ public class jRdRand {
             System.out.println ( "Native code library failed to load.\n" + e ) ;
             System.exit ( 1 ) ;
         }
-    }
-
-    public static void main(String[] args) {
-        jRdRand jrd = new jRdRand();
-        long seed = jrd.rdseed();
-        long randomNum = jrd.rdrand(seed);
-        System.out.println("RDSEED: " + seed);
-        System.out.println("RDRAND: " + randomNum);
     }
 }

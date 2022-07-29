@@ -33,6 +33,7 @@ model {
                     cCompiler.args '-I', "${jvmHome}/include/darwin"
                     cCompiler.args '-mmacosx-version-min=10.4'
                     linker.args '-mmacosx-version-min=10.4'
+                    //TODO Compile this on a MAC
                 } else if (targetPlatform.operatingSystem.linux) {
                     cCompiler.args '-I', "${jvmHome}/include"
                     cCompiler.args '-I', "${jvmHome}/include/linux"
@@ -51,9 +52,15 @@ model {
                 } else if (targetPlatform.operatingSystem.windows) {
                     cCompiler.args "-I${jvmHome}/include"
                     cCompiler.args "-I${jvmHome}/include/win32"
+                    cCompiler.args '/RTC'         // Runtime error checks
+                    cCompiler.args '/GS'          // GuardStack
+                    cCompiler.args '/DYNAMICBASE' // ASLR
+                    cCompiler.args '/guard:cf'    // Control flow guard
+                    cCompiler.args '/NXCOMPAT'    // DEP (On by default but to be sure)
                 } else if (targetPlatform.operatingSystem.freeBSD) {
                     cCompiler.args '-I', "${jvmHome}/include"
                     cCompiler.args '-I', "${jvmHome}/include/freebsd"
+                    //TODO Compile on FreeBSD system and setup secure compiler options
                 }
             }
         }

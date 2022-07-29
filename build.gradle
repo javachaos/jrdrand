@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'application'
     id 'c'
+    id 'maven-publish'
 }
 
 //mainClassName = 'MainDemo'
@@ -75,9 +76,6 @@ jar {
     }
 }
 
-plugins {
-    id("maven-publish")
-}
 publishing {
     repositories {
         maven {

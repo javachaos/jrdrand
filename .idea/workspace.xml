@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Added ability to execute jar file and have Demo code run.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RdRand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RdRand.java" afterDir="false" />
-    </list>
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Updated README.md added boilerplate for pushing to GitHub packages" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659129854112</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated README.md added boilerplate for pushing to GitHub packages">
+      <created>1659133013045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659133013045</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +246,8 @@
     <MESSAGE value="fixed a compile error on like 206 of rdrand.c" />
     <MESSAGE value="Added VisualCpp runtime error checks, GuardStack and ASLR+CFG. Also included compiled dll to natives dir." />
     <MESSAGE value="Added ability to execute jar file and have Demo code run." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to execute jar file and have Demo code run." />
+    <MESSAGE value="Updated README.md added boilerplate for pushing to GitHub packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md added boilerplate for pushing to GitHub packages" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

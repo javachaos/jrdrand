@@ -1,10 +1,10 @@
 import org.gradle.internal.jvm.Jvm
 
 plugins {
-    id 'java'
-    id 'application'
+    id 'java-library'
     id 'c'
     id 'maven-publish'
+    id 'signing'
 }
 
 group 'com.github.javachaos'
@@ -12,10 +12,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-}
-
-application {
-    applicationDefaultJvmArgs = ["-Djava.library.path=" + file("${buildDir}/libs/rdrand/shared").absolutePath]
 }
 
 model {
@@ -80,6 +76,11 @@ jar {
     }
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 publishing {
     repositories {
         maven {
@@ -92,5 +93,41 @@ publishing {
         }
     }
     publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'jRdRand'
+            from components.java
+            pom {
+                name = 'jRdRand'
+                description = 'A simple RDRAND and RDSEED library for java.'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://github.com/javachaos/jrdrand/blob/master/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'javachaos'
+                        name = 'Alfred Laderoute'
+                        email = 'alfred_e@outlook.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/javachaos/jrdrand.git'
+                    developerConnection = 'scm:git:ssh@github.com:javachaos/jrdrand.git'
+                    url = 'https://github.com/javachaos/jrdrand/'
+                }
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
     }
 }

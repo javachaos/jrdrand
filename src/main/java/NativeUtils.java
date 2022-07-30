@@ -1,15 +1,36 @@
 import java.io.*;
 
+/**
+ * Native Utilities Class
+ */
 public class NativeUtils {
 
+    /**
+     * Unused Constructor
+     */
+    private NativeUtils() {}
+
+    /**
+     * Loads the linux shared library into the JVM.
+     */
     public static void loadLinux() {
         loadLibraryFromJar("native/x86_64/linux/librdrand.so", "librdrand", ".so");
     }
 
+    /**
+     * Loads the linux shared library into the JVM
+     */
     public static void loadWindows() {
         loadLibraryFromJar("native/x86_64/windows/rdrand.dll", "rdrand", ".dll");
     }
 
+    /**
+     * Load a library from within our jar into a temp file and then to
+     * the current running JVM instance.
+     * @param path the path to the native library
+     * @param prefix the name prefix of the native library
+     * @param suffix the name suffix of the native library (e.g. .so or .dll)
+     */
     private static void loadLibraryFromJar(final String path, final String prefix, final String suffix) {
         InputStream is = ClassLoader.getSystemResourceAsStream(path);
         if (is == null) {

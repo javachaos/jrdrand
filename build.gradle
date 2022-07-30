@@ -42,7 +42,7 @@ model {
                     cCompiler.args '-Wall'
                     cCompiler.args '-Wextra'
                     cCompiler.args '-D_FILE_OFFSET_BITS=64'
-                    cCompiler.args '-Os'
+                    cCompiler.args '-O1'
                     cCompiler.args '-fPIE'
                     cCompiler.args '-fPIC'
                     cCompiler.args '-fstack-protector-all'
@@ -50,9 +50,10 @@ model {
                     cCompiler.args '-fstack-clash-protection'
                     cCompiler.args '-D_FORTIFY_SOURCE=2'
                     cCompiler.args '-fexceptions'
-                    cCompiler.args '-Wl,-z,now -Wl,-z,relro -Wl,-pie -Wl,-z,defs'
                     cCompiler.args '-mrdrnd'
                     cCompiler.args '-mrdseed'
+                    cCompiler.args '-Wl,-z,now -Wl,-z,relro -Wl,-pie -Wl,-z,defs'
+                    cCompiler.args '-fsanitize-address-use-after-scope'
                 } else if (targetPlatform.operatingSystem.windows) {
                     cCompiler.args "-I${jvmHome}/include"
                     cCompiler.args "-I${jvmHome}/include/win32"

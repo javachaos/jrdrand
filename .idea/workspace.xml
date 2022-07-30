@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/native/x86_64/linux/librdrand.so" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/linux/librdrand.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,15 +82,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/fred/IdeaProjects/jRdRand/build/libs/jRdRand-1.0-SNAPSHOT.jar",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "/home/fred/IdeaProjects/jrdrand/src/main/resources/native/x86_64/linux",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/native/x86_64/linux" />
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main\resources\native\x86_64\windows" />
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\rdrand\native\x86_64\windows" />
       <recent name="$PROJECT_DIR$/src/rdrand/native/x86_64/linux" />
@@ -247,11 +251,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.jRdRand [components]" />
         <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jRdRand [build]" />
         <item itemvalue="Gradle.jRdRand [clean]" />
         <item itemvalue="Gradle.jRdRand [model]" />
-        <item itemvalue="Gradle.jRdRand [components]" />
       </list>
     </recent_temporary>
   </component>

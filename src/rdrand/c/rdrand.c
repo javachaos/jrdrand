@@ -33,13 +33,13 @@ void JNI_OnLoad_rdrand(JavaVM *vm, void *reserved)
 }
 
 JNIEXPORT jlong JNICALL
-Java_RdRand_rdrand(JNIEnv *env, jobject obj)
+Java_com_github_javachaos_jrdrand_RdRand_rdrand(JNIEnv *env, jobject obj)
 {
     return rdrand64();
 }
 
 JNIEXPORT jlong JNICALL
-Java_RdRand_rdseed(JNIEnv *env, jobject obj)
+Java_com_github_javachaos_jrdrand_RdRand_rdseed(JNIEnv *env, jobject obj)
 {
     return rdseed64();
 }

@@ -1,3 +1,5 @@
+package com.github.javachaos.jrdrand.utils;
+
 import java.io.*;
 
 /**

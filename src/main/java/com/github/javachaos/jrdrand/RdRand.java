@@ -1,8 +1,12 @@
+package com.github.javachaos.jrdrand;
+
+import com.github.javachaos.jrdrand.utils.NativeUtils;
+
 import java.util.Locale;
 import java.util.Objects;
 
 /**
- * A simple RdRand class that has two functions
+ * A simple com.github.javachaos.jrdrand.RdRand class that has two functions
  * 1. rand() - get a random long (using RDRAND CPU instruction)
  * 2. seed() - get a random long seed value (using RDSEED CPU instruction)
  */

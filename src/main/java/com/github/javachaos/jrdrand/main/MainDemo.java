@@ -1,3 +1,7 @@
+package com.github.javachaos.jrdrand.main;
+
+import com.github.javachaos.jrdrand.RdRand;
+
 /**
  * Main Demo class.
  */

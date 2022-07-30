@@ -19,5 +19,5 @@ Simple library for java to access RDRAND instruction on supported CPUs
 RdRand rd = new RdRand();
 long s = rd.seed();
 System.out.println("RDSEED: " + s);
-System.out.println("RDRAND: " + rd.rand(s));
+System.out.println("RDRAND: " + rd.rand());
 ```

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed whitespace and comments in rdrand.c">
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Unnamed">
+  <component name="RunManager" selected="Application.rdrand">
     <configuration name="rdrand" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -349,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659138585440</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle">
+      <created>1659140026751</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659140026751</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +382,8 @@
     <MESSAGE value="Added static keyword before inline statements in rdrand.c" />
     <MESSAGE value="Removed inline keyword altogether in rdrand.c" />
     <MESSAGE value="Removed whitespace and comments in rdrand.c" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed whitespace and comments in rdrand.c" />
+    <MESSAGE value="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

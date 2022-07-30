@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Objects;
+
 public class RdRand {
 
     /**
@@ -8,10 +12,9 @@ public class RdRand {
      * If the CPU is not an intel processor or does not support DRNG
      * return a value less than zero.
      *
-     * @param seed initial seed value for rdrand
      * @return a 64-bit DRNG value from a supported intel processor
      */
-    private native long rdrand(long seed);
+    private native long rdrand();
 
     /**
      * Attempt to get a true random seed using the Intel RDSEED cpu instruction.
@@ -21,10 +24,10 @@ public class RdRand {
      */
     private native long rdseed();
 
-    public long rand(long seed) {
+    public long rand() {
         long s = 0;
         while (s <= 0) {
-            s = rdrand(seed);
+            s = rdrand();
         }
         return s;
     }
@@ -37,16 +40,21 @@ public class RdRand {
         return s;
     }
 
-    static {//TODO Replace with System.load() and a switch statement per OS
-        try
-        {
+    static {
+        String OS = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH);
+        String protocol = Objects.requireNonNull(RdRand.class.getResource("RdRand.class")).getProtocol();
+        if(Objects.equals(protocol, "jar")){
+            if (OS.startsWith("windows")) {
+                NativeUtils.loadWindows();
+            }
+            if (OS.startsWith("linux")) {
+                NativeUtils.loadLinux();
+            }
+            //TODO Add support for more OS's
+        } else if(Objects.equals(protocol, "file")) {
             //must set VM option -Djava.library.path=build/libs/rdrand/shared
+            //for running in IDE load from build dir.
             System.loadLibrary ("rdrand");
-        }
-        catch ( Throwable e )
-        {
-            System.out.println ( "Native code library failed to load.\n" + e ) ;
-            System.exit ( 1 ) ;
         }
     }
 }

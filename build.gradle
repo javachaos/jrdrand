@@ -4,9 +4,11 @@ plugins {
     id 'java'
     id 'application'
     id 'c'
+    id 'maven-publish'
 }
 
-mainClassName = 'jRdRand'
+group 'com.github.javachaos'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -33,6 +35,7 @@ model {
                     cCompiler.args '-I', "${jvmHome}/include/darwin"
                     cCompiler.args '-mmacosx-version-min=10.4'
                     linker.args '-mmacosx-version-min=10.4'
+                    //TODO Compile this on a MAC
                 } else if (targetPlatform.operatingSystem.linux) {
                     cCompiler.args '-I', "${jvmHome}/include"
                     cCompiler.args '-I', "${jvmHome}/include/linux"
@@ -48,12 +51,20 @@ model {
                     cCompiler.args '-D_FORTIFY_SOURCE=2'
                     cCompiler.args '-fexceptions'
                     cCompiler.args '-Wl,-z,now -Wl,-z,relro -Wl,-pie -Wl,-z,defs'
+                    cCompiler.args '-mrdrnd'
+                    cCompiler.args '-mrdseed'
                 } else if (targetPlatform.operatingSystem.windows) {
                     cCompiler.args "-I${jvmHome}/include"
                     cCompiler.args "-I${jvmHome}/include/win32"
+                    cCompiler.args '/RTC'         // Runtime error checks
+                    cCompiler.args '/GS'          // GuardStack
+                    cCompiler.args '/DYNAMICBASE' // ASLR
+                    cCompiler.args '/guard:cf'    // Control flow guard
+                    cCompiler.args '/NXCOMPAT'    // DEP (On by default but to be sure)
                 } else if (targetPlatform.operatingSystem.freeBSD) {
                     cCompiler.args '-I', "${jvmHome}/include"
                     cCompiler.args '-I', "${jvmHome}/include/freebsd"
+                    //TODO Compile on FreeBSD system and setup secure compiler options
                 }
             }
         }
@@ -61,3 +72,24 @@ model {
 }
 
 classes.dependsOn 'rdrandSharedLibrary'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'MainDemo'
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/javachaos/jrdrand")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+    }
+}

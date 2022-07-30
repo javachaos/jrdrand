@@ -10,6 +10,7 @@ build/
 .idea/compiler.xml
 .idea/workspace.xml
 .idea/libraries/
+.idea/.name
 *.iws
 *.iml
 *.ipr

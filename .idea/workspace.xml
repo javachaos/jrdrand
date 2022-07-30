@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Made gradlew executable to fix error during gitHub action.">
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Updated gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RdRand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RdRand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +85,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
@@ -381,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659153380756</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updated build.gradle, added javadoc comments.">
+      <created>1659156495479</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659156495479</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +418,8 @@
     <MESSAGE value="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions." />
     <MESSAGE value="Updated rdrand.dll added github-packages.yml" />
     <MESSAGE value="Made gradlew executable to fix error during gitHub action." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made gradlew executable to fix error during gitHub action." />
+    <MESSAGE value="Updated build.gradle, added javadoc comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated build.gradle, added javadoc comments." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

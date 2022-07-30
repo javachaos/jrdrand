@@ -4,7 +4,6 @@ plugins {
     id 'java-library'
     id 'c'
     id 'maven-publish'
-    id 'signing'
 }
 
 group 'com.github.javachaos'
@@ -120,10 +119,6 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    sign publishing.publications.mavenJava
 }
 
 javadoc {

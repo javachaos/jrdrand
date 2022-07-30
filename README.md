@@ -1,5 +1,6 @@
 # jrdrand
 [![CodeQL](https://github.com/javachaos/jrdrand/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/javachaos/jrdrand/actions/workflows/codeql-analysis.yml)
+[![Publish package to GitHub Packages](https://github.com/javachaos/jrdrand/actions/workflows/github-packages.yml/badge.svg)](https://github.com/javachaos/jrdrand/actions/workflows/github-packages.yml)
 
 Simple library for java to access RDRAND instruction on supported CPUs
 

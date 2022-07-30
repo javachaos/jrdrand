@@ -93,7 +93,7 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'jRdRand'
+            artifactId = 'jrdrand'
             from components.java
             pom {
                 name = 'jRdRand'

@@ -13,9 +13,26 @@ Simple library for java to access RDRAND instruction on supported CPUs
 - [ ] Add support for BSD
 - [ ] Add support for MacOSX
 - [ ] Add more features
-- [ ] Publish to GithubPackages
+- [x] Publish to GithubPackages
 
 #### Example Usage: ####
+
+Add the following to your pom.xml
+```xml
+<dependency>
+  <groupId>com.github.javachaos</groupId>
+  <artifactId>jrdrand</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+or the following to your build.gradle file
+```groovy
+dependencies {
+    implementation 'com.github.javachaos:jrdrand'
+}
+```
+
+
 ```java
 RdRand rd = new RdRand();
 long s = rd.seed();

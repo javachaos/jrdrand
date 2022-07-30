@@ -12,6 +12,8 @@ import java.util.Objects;
  */
 public class RdRand {
 
+    static boolean debug = true;
+
     /**
      * Create a new RdRand() instance
      */
@@ -67,13 +69,22 @@ public class RdRand {
         String protocol = Objects.requireNonNull(RdRand.class.getResource("RdRand.class")).getProtocol();
         if(Objects.equals(protocol, "jar")){
             if (OS.startsWith("windows")) {
+                if (debug) {
+                    System.out.println("OS: Windows, loading from JAR.");
+                }
                 NativeUtils.loadWindows();
             }
             if (OS.startsWith("linux")) {
+                if (debug) {
+                    System.out.println("OS: Linux, loading from JAR.");
+                }
                 NativeUtils.loadLinux();
             }
             //TODO Add support for more OS's
         } else if(Objects.equals(protocol, "file")) {
+            if (debug) {
+                System.out.println("OS: " + OS + ", loading from PATH.");
+            }
             System.loadLibrary ("rdrand");
         }
     }

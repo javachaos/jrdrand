@@ -3,6 +3,7 @@ import org.gradle.internal.jvm.Jvm
 plugins {
     id 'java-library'
     id 'c'
+    id 'application'
     id 'maven-publish'
 }
 
@@ -11,6 +12,10 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+application {
+    applicationDefaultJvmArgs = ["-Djava.library.path=" + file("${buildDir}/libs/rdrand/shared").absolutePath]
 }
 
 model {
@@ -59,7 +64,7 @@ model {
                     cCompiler.args '/NXCOMPAT'    // DEP (On by default but to be sure)
                 } else if (targetPlatform.operatingSystem.freeBSD) {
                     cCompiler.args '-I', "${jvmHome}/include"
-                    cCompiler.args '-I', "${jvmHome}/include/freebsd"
+                    clibrdrandCompiler.args '-I', "${jvmHome}/include/freebsd"
                     //TODO Compile on FreeBSD system and setup secure compiler options
                 }
             }
@@ -71,7 +76,7 @@ classes.dependsOn 'rdrandSharedLibrary'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'MainDemo'
+        attributes 'Main-Class': 'com.github.javachaos.jrdrand.main.MainDemo'
     }
 }
 

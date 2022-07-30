@@ -19,17 +19,33 @@ Simple library for java to access RDRAND instruction on supported CPUs
 
 Add the following to your pom.xml
 ```xml
-<dependency>
-  <groupId>com.github.javachaos</groupId>
-  <artifactId>jrdrand</artifactId>
-  <version>1.0-SNAPSHOT</version>
-</dependency>
+<dependencies>
+    <dependency>
+      <groupId>com.github.javachaos</groupId>
+      <artifactId>jrdrand</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub Javachaos Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/javachaos/jrdrand</url>
+   </repository>
+</distributionManagement>
 ```
 or the following to your build.gradle file
 ```groovy
 dependencies {
     implementation 'com.github.javachaos:jrdrand'
 }
+
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/javachaos/jrdrand")
+    }
+}
+
 ```
 
 

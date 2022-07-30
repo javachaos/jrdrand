@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle">
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/native/x86_64/linux/librdrand.so" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/linux/librdrand.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,18 +74,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/fred/IdeaProjects/jrdrand/src/main/resources/native/x86_64/linux",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fred/IdeaProjects/jrdrand/src/main/resources/native/x86_64/linux&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/native/x86_64/linux" />
@@ -104,7 +101,7 @@
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.rdrand">
+  <component name="RunManager" selected="Gradle.jRdRand [model]">
     <configuration name="rdrand" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -251,11 +248,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.jRdRand [model]" />
         <item itemvalue="Gradle.jRdRand [components]" />
         <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jRdRand [build]" />
         <item itemvalue="Gradle.jRdRand [clean]" />
-        <item itemvalue="Gradle.jRdRand [model]" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659140026751</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions.">
+      <created>1659149595901</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659149595901</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +391,8 @@
     <MESSAGE value="Removed inline keyword altogether in rdrand.c" />
     <MESSAGE value="Removed whitespace and comments in rdrand.c" />
     <MESSAGE value="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle" />
+    <MESSAGE value="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

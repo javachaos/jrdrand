@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/github-packages.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/codeql-analysis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/codeql-analysis.yml" afterDir="false" />
+    <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Updated rdrand.dll added github-packages.yml">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/github-packages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/github-packages.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/native/x86_64/windows/rdrand.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/windows/rdrand.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659149595901</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated rdrand.dll added github-packages.yml">
+      <created>1659151759674</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659151759674</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,7 +400,8 @@
     <MESSAGE value="Removed whitespace and comments in rdrand.c" />
     <MESSAGE value="Removed extra if conditions in rdrand.c also added GCC compiler options to build.gradle" />
     <MESSAGE value="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="added pause instruction to rdrand.c in the spin loop for rdrand and rdseed functions." />
+    <MESSAGE value="Updated rdrand.dll added github-packages.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated rdrand.dll added github-packages.yml" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jRdRand$rdrand.ic" NAME="rdrand Coverage Results" MODIFIED="1659076181525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

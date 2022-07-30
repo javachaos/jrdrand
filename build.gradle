@@ -51,6 +51,8 @@ model {
                     cCompiler.args '-D_FORTIFY_SOURCE=2'
                     cCompiler.args '-fexceptions'
                     cCompiler.args '-Wl,-z,now -Wl,-z,relro -Wl,-pie -Wl,-z,defs'
+                    cCompiler.args '-mrdrnd'
+                    cCompiler.args '-mrdseed'
                 } else if (targetPlatform.operatingSystem.windows) {
                     cCompiler.args "-I${jvmHome}/include"
                     cCompiler.args "-I${jvmHome}/include/win32"

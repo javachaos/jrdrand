@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03a434c7-b375-47a0-bd6c-865b91dd6f79" name="Changes" comment="Updated github-packages.yml to use commit SHAs">
+      <change afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/native/x86_64/windows/rdrand.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/native/x86_64/windows/rdrand.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdrand/c/rdrand.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <recent name="C:\Users\fred\IdeaProjects\jRdRand\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Unnamed">
+  <component name="RunManager" selected="Gradle.jRdRand [model]">
     <configuration name="rdrand" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -250,9 +251,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.jRdRand [jar]" />
-        <item itemvalue="Gradle.jRdRand [components]" />
         <item itemvalue="Gradle.jRdRand [model]" />
+        <item itemvalue="Gradle.jRdRand [components]" />
+        <item itemvalue="Gradle.jRdRand [jar]" />
         <item itemvalue="Gradle.jrdrand [javadoc]" />
         <item itemvalue="Gradle.jRdRand [build]" />
       </list>

@@ -44,11 +44,7 @@ public class RdRand {
      * @return a positive 64bit random value
      */
     public long rand() {
-        long s = 0;
-        while (s <= 0) {
-            s = rdrand();
-        }
-        return s;
+        return rdrand();
     }
 
     /**
@@ -57,11 +53,7 @@ public class RdRand {
      * @return a positive 64bit random seed value
      */
     public long seed() {
-        long s = 0;
-        while (s <= 0) {
-            s = rdseed();
-        }
-        return s;
+        return rdseed();
     }
 
     static {

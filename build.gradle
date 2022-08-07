@@ -33,8 +33,21 @@ model {
                 if (targetPlatform.operatingSystem.macOsX) {
                     cCompiler.args '-I', "${jvmHome}/include"
                     cCompiler.args '-I', "${jvmHome}/include/darwin"
-                    cCompiler.args '-mmacosx-version-min=10.4'
-                    linker.args '-mmacosx-version-min=10.4'
+                    cCompiler.args '-llibc++'
+                    cCompiler.args '-lc'
+                    cCompiler.args '-O1'
+                    cCompiler.args '-fPIE'
+                    cCompiler.args '-fPIC'
+                    cCompiler.args '-mrdrnd'
+                    cCompiler.args '-mrdseed'
+                    cCompiler.args '-fsanitize=undefined'
+                    cCompiler.args '-mmacosx-version-min=10.9'
+                    cCompiler.args '-fstack-protector-all'
+                    cCompiler.args '-fstack-protector-strong'
+                    cCompiler.args '-fstack-clash-protection'
+                    cCompiler.args '-Wl,-z,now -Wl,-z,relro -Wl,-pie -Wl,-z,defs'
+                    linker.args '-mmacosx-version-min=10.9'
+                    linker.args '-v'
                     //TODO Compile this on a MAC
                 } else if (targetPlatform.operatingSystem.linux) {
                     cCompiler.args '-I', "${jvmHome}/include"

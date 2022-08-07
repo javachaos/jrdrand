@@ -1,20 +1,22 @@
 #include "rdrand.h"
 
-inline uint64_t rdrand64()
+static
+inline intrin_u64 rdrand64()
 {
     intrin_u64 r;
     do { _mm_pause(); } while( !_rdrand64_step(&r) );
     return r;
 }
 
-inline uint64_t rdseed64()
+static
+inline intrin_u64 rdseed64()
 {
     intrin_u64 r;
     do { _mm_pause(); } while( !_rdseed64_step(&r) );
     return r;
 }
 
-void JNI_OnLoad_rdrand(JavaVM *vm, void *reserved)
+static int JNI_OnLoad_rdrand(JavaVM *vm, void *reserved)
 {
     return JNI_VERSION_1_8;
 }

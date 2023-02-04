@@ -3,6 +3,7 @@
 [![Publish package to GitHub Packages](https://github.com/javachaos/jrdrand/actions/workflows/github-packages.yml/badge.svg)](https://github.com/javachaos/jrdrand/actions/workflows/github-packages.yml)
 
 Simple library for java to access RDRAND instruction on supported CPUs
+NOTE: Ensure your CPU microcode is fully up-to-date before using this to avoid Special Register Buffer Data Sampling (SRBDS).
 
 | Currently Supported OS's: | Currently Tested OS's: |
 |---------------------------|------------------------|
